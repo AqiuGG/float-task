@@ -1,0 +1,63 @@
+# ===== 依赖 =====
+node_modules/
+.pnp/
+.pnp.js
+
+# ===== 构建产物 =====
+dist/
+dist-electron/
+out/
+.nuxt/
+.next/
+ out/
+
+# ===== 开发环境 =====
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ===== 日志 & 调试 =====
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+electron-builder-debug.log*
+*.log
+
+# ===== OS & 编辑器 =====
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.sublime-*
+
+# ===== Electron 专用 =====
+# 开发模式 userdata 目录（不提交用户数据）
+userdata/
+# 图标生成脚本临时文件
+gen-ico.js
+gen-icon.js
+
+# ===== 项目专有 =====
+# NSIS 缓存
+build/
+# electron-builder 缓存
+AppData/
+
+# ===== 压缩包 & 安装程序 =====
+*.exe
+*.msi
+*.zip
+*.7z
+*.dmg
+*.blockmap
+
+# ===== 其他 =====
+coverage/
+.nyc_output/
