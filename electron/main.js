@@ -344,9 +344,18 @@ ipcMain.on('show-from-edge', () => showFromEdge())
 
 // 发送系统通知
 ipcMain.on('show-notification', (event, { title, body }) => {
-  const { Notification } = require('electron')
+  // Win7 不支持 Notification API，使用托盘气泡通知作为 fallback
   if (Notification.isSupported()) {
     new Notification({ title, body }).show()
+  } else {
+    // Win7 fallback：通过托盘显示气泡提示
+    if (tray) {
+      tray.displayBalloon({
+        iconType: 'info',
+        title: title || '灵动便签',
+        content: body || ''
+      })
+    }
   }
 })
 

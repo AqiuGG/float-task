@@ -19,8 +19,8 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.6",
     "concurrently": "^9.2.1",
-    "electron": "^41.5.0",
-    "electron-builder": "^26.8.1",
+    "electron": "^22.3.27",
+    "electron-builder": "^24.13.3",
     "vite": "^8.0.10",
     "wait-on": "^9.0.5"
   },
@@ -42,7 +42,9 @@
       "target": [
         {
           "target": "nsis",
-          "arch": ["x64"]
+          "arch": [
+            "x64"
+          ]
         }
       ],
       "icon": "electron/icon.png",
@@ -52,7 +54,12 @@
         {
           "from": "node_modules/electron/dist/locales",
           "to": "locales",
-          "filter": ["zh-CN.pak", "zh-TW.pak", "en-US.pak", "en-GB.pak"]
+          "filter": [
+            "zh-CN.pak",
+            "zh-TW.pak",
+            "en-US.pak",
+            "en-GB.pak"
+          ]
         }
       ]
     },
